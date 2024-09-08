@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agenda de contatos</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mulish&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="./IMAGE/agenda.svg" alt="">
+            <h1>Agenda de contatos</h1>
+        </header>
+        <form id="form-contatos">
+            <label for="nome-contato">Nome:</label>
+            <input type="text" id="nome-contato">
+            <p class="error" id="msg-error-name"></p>
+            <label for="telefone-contato">Telefone:</label>
+            <input class="tel-ddd" id="telefone-contato">
+            <p class="error" id="msg-error-tel"></p>
+            <button type="submit">Cadastrar</button>
+        </form>
+        <table cellspacing="0">
+            <thead>
+                <tr>
+                    <th>Foto</td>
+                    <th>Nome</td>
+                    <th>Telefone</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td>Total de contatos</td>
+                    <td id="total-contatos">-</td>
+                    <td>-</td>
+                </tr>
+            </tfoot>
+        </table>    
+    </div>
+    <script src="main.js"></script>   
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.js"></script>
+    <script> $('.tel-ddd').mask('(00) 0 0000-0000')</script>
+</body>
+</html>
